@@ -44,10 +44,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${dmMono.variable}`}>
       <body className="font-display bg-bg text-text-primary">
+        {/* Wave background */}
         <div className="wave-bg" aria-hidden="true">
           <div className="wave-layer wave-layer-1" />
           <div className="wave-layer wave-layer-2" />
         </div>
+        {/* PS2 CRT + grain overlays */}
+        <div className="scanlines" aria-hidden="true" />
+        <div className="grain-overlay" aria-hidden="true" />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

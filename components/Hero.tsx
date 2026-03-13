@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import ShinyText from '@/components/ui/ShinyText'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import ProfilePhoto from '@/components/ui/ProfilePhoto'
+import PS2Towers from '@/components/ui/PS2Towers'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const nameWords = ['LUIZ', 'FILLIPE', 'XAVIER']
@@ -29,6 +31,9 @@ export default function Hero() {
     >
       {/* Parallax grid background */}
       <motion.div className="absolute inset-0 grid-bg" style={{ y: bgY }} />
+
+      {/* PS2 towers */}
+      <PS2Towers />
 
       {/* Radial lime glow */}
       <div
@@ -67,7 +72,7 @@ export default function Hero() {
       </motion.nav>
 
       {/* Main content */}
-      <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-[1400px] mx-auto w-full pb-24">
+      <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-[1400px] mx-auto w-full pb-24 flex items-center justify-between gap-12">
 
         {/* Status badge */}
         <motion.div
@@ -97,8 +102,13 @@ export default function Hero() {
                 transition={{ delay: 0.3 + wi * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
                 <span
-                  className={wi !== 2 ? 'block text-text-primary' : 'block'}
+                  className={
+                    wi !== 2
+                      ? 'block text-text-primary ps2-chroma'
+                      : 'block glitch ps2-chroma'
+                  }
                   style={wi === 2 ? { WebkitTextStroke: '1px #5B9BD5', color: 'transparent' } : {}}
+                  data-text={word}
                 >
                   {word}
                 </span>
@@ -160,6 +170,11 @@ export default function Hero() {
             {t.hero.touch}
           </a>
         </motion.div>
+      </div>
+
+      {/* Profile photo — hidden on small screens */}
+      <div className="hidden lg:flex items-end justify-center flex-shrink-0 pb-24">
+        <ProfilePhoto />
       </div>
 
       {/* Scroll indicator — outside content div, anchored to section bottom */}
