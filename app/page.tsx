@@ -7,7 +7,7 @@ import DockNav from '@/components/DockNav'
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative z-10">
       <Hero />
       <About />
       <Projects />

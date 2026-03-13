@@ -12,7 +12,7 @@ const config: Config = {
         bg: '#080808',
         surface: '#111111',
         border: '#1E1E1E',
-        lime: '#C8FF00',
+        lime: '#5B9BD5',
         'text-primary': '#F5F5F0',
         'text-muted': '#888888',
       },

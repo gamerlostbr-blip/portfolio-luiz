@@ -52,7 +52,7 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  <h3 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight">
+                  <h3 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight title-underline">
                     {project.name}
                   </h3>
                   <p className="font-mono text-xs text-text-muted mt-2 tracking-wide">{project.role}</p>
@@ -118,7 +118,7 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  <h4 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight mb-2 group-hover:text-lime transition-colors duration-200">
+                  <h4 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight mb-2 group-hover:text-lime transition-colors duration-200 title-underline">
                     {project.name}
                   </h4>
                   <p className="font-mono text-xs text-text-muted tracking-wide mb-6">{project.role} · {project.year}</p>
@@ -152,7 +152,7 @@ export default function Projects() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="font-mono text-[10px] text-lime tracking-widest">{project.id}</span>
               </div>
-              <h4 className="font-display font-bold text-base text-text-primary tracking-tight mb-1 group-hover:text-lime transition-colors duration-200">
+              <h4 className="font-display font-bold text-base text-text-primary tracking-tight mb-1 group-hover:text-lime transition-colors duration-200 title-underline">
                 {project.name}
               </h4>
               <p className="font-mono text-[10px] text-text-muted tracking-wide mb-3">{project.role} · {project.year}</p>

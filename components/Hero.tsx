@@ -35,7 +35,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(200,255,0,0.04) 0%, transparent 70%)',
+            'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(91,155,213,0.07) 0%, transparent 70%)',
         }}
       />
 
@@ -98,7 +98,7 @@ export default function Hero() {
               >
                 <span
                   className={wi !== 2 ? 'block text-text-primary' : 'block'}
-                  style={wi === 2 ? { WebkitTextStroke: '1px #C8FF00', color: 'transparent' } : {}}
+                  style={wi === 2 ? { WebkitTextStroke: '1px #5B9BD5', color: 'transparent' } : {}}
                 >
                   {word}
                 </span>
